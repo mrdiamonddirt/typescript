@@ -4,21 +4,25 @@ import MyHeader from './MyHeader';
 import { useState, useEffect } from 'react';
 
 
+
 function App() {
   const [ApiResponse, setSetApiResponse] = useState()
-  const [pokeurlnumber, setpokeurlnumber] = useState('')
+  const [pokeurlnumber, setpokeurlnumber] = useState('1')
  
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokeurlnumber}`)
       .then(response => response.json())
-      .then(data => setSetApiResponse(data.results));
+      .then(data => setSetApiResponse(data));
       
     return () => {
       
     }
   }, [pokeurlnumber])
   
+  console.log(ApiResponse)
 
+
+ 
   return (
     <>
     <div className="App">
