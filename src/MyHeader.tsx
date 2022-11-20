@@ -5,7 +5,7 @@ interface myInterface {
 }
 
 const MyHeader: React.FunctionComponent<myInterface> = (props: myInterface) => (
-  <h1>Hola, {props.name}! </h1>
+  <h1>Hello, {props.name}! </h1>
 );
 
 export default MyHeader;
